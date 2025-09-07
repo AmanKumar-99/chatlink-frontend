@@ -70,39 +70,39 @@
   }
 
   .dark {
-    --background: 220 25% 8%;
-    --foreground: 220 15% 92%;
+    --background: 220 13% 9%;
+    --foreground: 220 8% 95%;
     
-    --chat-background: 220 25% 9%;
-    --chat-sidebar: 220 25% 7%;
-    --message-sent: 217 91% 50%;
-    --message-received: 220 25% 12%;
-    --message-hover: 220 25% 15%;
+    --chat-background: 220 13% 10%;
+    --chat-sidebar: 220 13% 8%;
+    --message-sent: 217 91% 55%;
+    --message-received: 220 13% 15%;
+    --message-hover: 220 13% 18%;
 
-    --card: 220 25% 10%;
-    --card-foreground: 220 15% 92%;
+    --card: 220 13% 12%;
+    --card-foreground: 220 8% 95%;
 
-    --popover: 220 25% 10%;
-    --popover-foreground: 220 15% 92%;
+    --popover: 220 13% 12%;
+    --popover-foreground: 220 8% 95%;
 
     --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary-foreground: 220 13% 9%;
     --primary-light: 217 91% 70%;
 
-    --secondary: 220 25% 15%;
-    --secondary-foreground: 220 15% 92%;
+    --secondary: 220 13% 16%;
+    --secondary-foreground: 220 8% 95%;
 
-    --muted: 220 25% 15%;
-    --muted-foreground: 220 8% 65%;
+    --muted: 220 13% 16%;
+    --muted-foreground: 220 8% 70%;
 
-    --accent: 220 25% 15%;
-    --accent-foreground: 220 15% 92%;
+    --accent: 220 13% 16%;
+    --accent-foreground: 220 8% 95%;
 
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 220 15% 92%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 220 8% 95%;
 
-    --border: 220 25% 18%;
-    --input: 220 25% 18%;
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
     --ring: 217 91% 60%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;

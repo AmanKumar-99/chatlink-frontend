@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
 import { RootState } from '@/store/store';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { MessageCircle, Users, Shield, Zap } from 'lucide-react';
 
 const Index = () => {
@@ -13,6 +14,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-chat">
+      <div className="absolute top-4 right-4">
+        <ThemeToggle />
+      </div>
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center space-y-8">
