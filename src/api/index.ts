@@ -1,16 +1,16 @@
 import axios from "axios"
 
-const BASE_URL = "http://localhost:9000/api/auth"
+export const BASE_URL = "http://localhost:9000/api"
 
 export const registerUser = async (payload: unknown) => {
-  return await axios.post(`${BASE_URL}/register`, payload, {
+  return await axios.post(`${BASE_URL}/auth/register`, payload, {
     headers: { "Content-Type": "application/json" },
     withCredentials: true,
   })
 }
 
 export const loginUser = async (payload: unknown) => {
-  return await axios.post(`${BASE_URL}/signin`, payload, {
+  return await axios.post(`${BASE_URL}/auth/signin`, payload, {
     withCredentials: true,
   })
 }

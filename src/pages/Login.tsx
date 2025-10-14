@@ -14,8 +14,9 @@ import {
 import { ThemeToggle } from "@/components/ui/theme-toggle"
 import { loginSuccess } from "@/store/slices/authSlice"
 import { MessageCircle } from "lucide-react"
-import { loginUser } from "@/api/authApi"
+import { loginUser } from "@/api/index"
 import { toast } from "@/components/ui/use-toast"
+import { useSocket } from "@/context/socketContext"
 
 type FormState = { email: string; password: string }
 
@@ -23,6 +24,7 @@ const initialForm: FormState = { email: "", password: "" }
 
 export default function Login() {
   const [form, setForm] = useState<FormState>(initialForm)
+  const socket = useSocket()
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -46,7 +48,13 @@ export default function Login() {
       const res = await loginUser({ email, password })
       const user = res?.data?.user
       if (user) {
-        dispatch(loginSuccess(user))
+        dispatch(
+          loginSuccess({
+            ...user,
+            id: user._id,
+          })
+        )
+        socket.emit("user:join", user._id)
         navigate("/chat")
       }
     } catch (err: unknown) {

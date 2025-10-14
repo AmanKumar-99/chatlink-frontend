@@ -14,7 +14,7 @@ import {
 import { ThemeToggle } from "@/components/ui/theme-toggle"
 import { loginSuccess } from "@/store/slices/authSlice"
 import { MessageCircle } from "lucide-react"
-import { registerUser } from "@/api/authApi"
+import { registerUser } from "@/api/index"
 import { toast } from "@/components/ui/use-toast"
 
 type FormState = { name: string; email: string; password: string }
@@ -59,7 +59,9 @@ export default function Signup() {
         })
         return
       }
-      dispatch(loginSuccess(user))
+      dispatch(
+        loginSuccess({ ...user, id: user._id })
+      )
       navigate("/chat")
     } catch (err: unknown) {
       console.error("Signup error:", err)
