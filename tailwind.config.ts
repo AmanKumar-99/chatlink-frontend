@@ -1,8 +1,13 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -97,18 +102,18 @@ export default {
         "fade-in": "fade-in 0.3s ease-out",
       },
       backgroundImage: {
-        'gradient-primary': 'var(--gradient-primary)',
-        'gradient-chat': 'var(--gradient-chat)',
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-chat": "var(--gradient-chat)",
       },
       boxShadow: {
-        'message': 'var(--shadow-message)',
-        'elevation': 'var(--shadow-elevation)',
+        message: "var(--shadow-message)",
+        elevation: "var(--shadow-elevation)",
       },
       transitionTimingFunction: {
-        'smooth': 'var(--transition-smooth)',
-        'spring': 'var(--transition-spring)',
+        smooth: "var(--transition-smooth)",
+        spring: "var(--transition-spring)",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+} satisfies Config

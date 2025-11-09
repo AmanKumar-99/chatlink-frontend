@@ -1,0 +1,7 @@
+node_modules
+dist
+build
+public
+tailwind.config.ts
+tsconfig.app.json
+tsconfig.node.json
